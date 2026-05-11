@@ -1,0 +1,20 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# ---------------------------------------
+# 1️⃣ Force HTTPS (but only if not already HTTPS)
+# ---------------------------------------
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ---------------------------------------
+# 2️⃣ Sitemap exception (must come before routing)
+# ---------------------------------------
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# ---------------------------------------
+# 3️⃣ Route all requests to index.php
+# ---------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]

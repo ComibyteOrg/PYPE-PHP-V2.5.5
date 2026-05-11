@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+      - ./Storage/logs:/var/www/html/Storage/logs
+      - ./Storage/uploads:/var/www/html/Storage/uploads
+    environment:
+      - APP_ENV=development
+      - APP_DEBUG=true
+      - DB_TYPE=mysql
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_NAME=pype_app
+      - DB_USER=pype_user
+      - DB_PASS=pype_secret
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - db
+      - redis
+    networks:
+      - pype_network
+
+  db:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD=root_secret
+      MYSQL_DATABASE=pype_app
+      MYSQL_USER=pype_user
+      MYSQL_PASSWORD=pype_secret
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - pype_network
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - pype_network
+
+  memcached:
+    image: memcached:1.6-alpine
+    ports:
+      - "11211:11211"
+    networks:
+      - pype_network
+
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    networks:
+      - pype_network
+
+volumes:
+  mysql_data:
+  redis_data:
+
+networks:
+  pype_network:
+    driver: bridge

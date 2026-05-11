@@ -1,0 +1,54 @@
+﻿# ==========================================
+# PYPE PHP FRAMEWORK - .gitignore
+# ==========================================
+
+# ---- Environment ----
+.env
+.env.local
+.env.*.local
+.env.testing
+
+# ---- Dependencies ----
+/vendor/
+composer.lock
+
+# ---- Build & Cache ----
+/build/
+/cache/
+
+# ---- Storage ----
+/Storage/logs/
+/Storage/uploads/
+/Storage/framework/
+/database.sqlite
+/database.sqlite-journal
+
+# ---- IDE & Editor ----
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# ---- OS Files ----
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ---- PHP ----
+*.cache
+*.phpunit.result.cache
+.phpunit.cache/
+.phpcs-cache
+
+# ---- Testing ----
+/coverage/
+/.phpunit.cache/
+phpunit.xml.bak
+
+# ---- Temp & Logs ----
+*.log
+*.tmp
+*.temp
