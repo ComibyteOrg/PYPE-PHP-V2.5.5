@@ -2,7 +2,7 @@
 ### The Professional, Beginner-Friendly PHP Framework By Comibyte
 
 <div align="center">
-  <img src="[https://imgs.search.brave.com/a2QJ4QGpzGpXeDGHk1c-pL3FdZ-v47YnUIxeu4pjCe4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9vbHV3YWRpbXUtYWRlZGVq/aS53ZWIuYXBwL2ltYWdlcy9sb2dvLnBu/Zw](https://oluwadimu-adedeji.web.app/images/logo1.png)" alt="Pype PHP Framework" width="300">
+  <img src="https://oluwadimu-adedeji.web.app/images/logo1.png" alt="Pype PHP Framework" width="300">
   <br>
   <p>
     <img src="https://img.shields.io/badge/PHP-8.2%2B-blue?style=for-the-badge&logo=php" alt="PHP Version">
