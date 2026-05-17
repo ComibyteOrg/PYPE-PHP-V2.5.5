@@ -75,7 +75,7 @@ Before starting, make sure you have:
 
 **Option A: Clone from GitHub**
 ```bash
-git clone https://github.com/ComibyteOrg/PYPE-PHP-V2.5.git my-project 
+git clone https://github.com/ComibyteOrg/PYPE-PHP-V2.5.5.git my-project 
 cd my-project 
 ```
 
