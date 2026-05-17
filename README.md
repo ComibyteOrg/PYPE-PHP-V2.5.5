@@ -152,7 +152,7 @@ Pype is a **modern PHP framework** inspired by Django (Python's popular framewor
 
 ```bash
 # Clone the repository
-git clone https://github.com/ComibyteOrg/PYPE-PHP-V2.5.git your-project-name
+git clone https://github.com/ComibyteOrg/PYPE-PHP-V2.5.5.git your-project-name
 cd your-project-name
 
 # Install dependencies
