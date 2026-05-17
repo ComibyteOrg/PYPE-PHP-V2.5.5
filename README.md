@@ -803,8 +803,8 @@ MIT License - See [LICENSE](LICENSE) file for details.
 ## 🎉 Get Started Today!
 
 ```bash
-git clone https://github.com/ComibyteOrg/PYPE-PHP-V2.5.git
-cd PYPE-PHP-V2.5
+git clone https://github.com/ComibyteOrg/PYPE-PHP-V2.5.5.git
+cd PYPE-PHP-V2.5.5
 composer install
 php pype.php serve
 ```
